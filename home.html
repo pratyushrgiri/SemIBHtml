@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .page{
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            /* fr means fraction of remaining space
+            so 1fr means 1 faction of remaining space
+            2fr means 2 fraction of remaining space
+            so for column, the first column takes 220px and the second
+            takes the rest of the space
+            */
+            grid-template-rows: auto auto 1fr auto;
+            min-height: 100vh;
+            grid-template-areas: 
+            "header header"
+            "navbar navbar"
+            "sidebar main"
+            "footer footer";
+        }
+        .header{
+            grid-area: header;
+            padding: 20px;
+            background-color: aliceblue;
+        }
+        .navbar{
+            grid-area: navbar;
+            padding: 20px;
+            background-color: rgb(157, 209, 255);
+        }
+        .sidebar{
+            grid-area: sidebar;
+            padding: 20px;
+            background-color: rgb(226, 239, 185);
+        }
+        .main{
+            grid-area: main;
+            padding: 20px;
+            background-color: rgb(213, 164, 252);
+        }
+        .footer{
+            grid-area: footer;
+            padding: 20px;
+            background-color: rgb(142, 148, 165);
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header class="header">header</header>
+        <nav class="navbar">navbar</nav>
+        <aside class="sidebar">sidebar</aside>
+        <main class="main">main</main>
+        <footer class="footer">footer</footer>
+    </div>
+</body>
+</html>

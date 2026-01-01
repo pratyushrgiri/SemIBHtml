@@ -15,8 +15,15 @@
             background-color: azure;
         }
         .navbar{
-            padding: 20px;
+            display: flex;
+            /* padding: 20px; */
+            height: 50px;
             background-color: antiquewhite;
+            justify-content: space-between;
+
+        }
+        a{
+
         }
         .content{
             display: flex;
@@ -36,6 +43,18 @@
             padding: 20px;
             background-color: whitesmoke;
         }
+        aside ul{
+            padding-left: 0px;
+        }
+        aside li{
+            list-style-type: none;
+            padding: 8px 32px;
+            margin: 8px 2px;
+            border-radius: 8px;
+            background-color: aqua;
+            cursor: pointer;
+            text-align: center;
+        }
 
     </style>
 </head>
@@ -43,9 +62,28 @@
     
     <div class="page">
         <header class="header">header</header>
-        <nav class="navbar">nav</nav>
+        <nav class="navbar">
+            <div>
+
+                <a href="#">something</a>
+                <a href="#">something</a>
+            </div>
+            <div>
+
+                <a href="#">something</a>
+                <a href="#">something</a>
+            </div>
+            
+        </nav>
         <div class="content">
-            <aside class="sidebar">side bar</aside>
+            <aside class="sidebar">
+                <ul>
+                    <li>Home</li>
+                    <li>Home</li>
+                    <li>Home</li>
+                    <li>Home</li>
+                </ul>
+            </aside>
             <main class="main">main</main>
         </div>
         <footer class="footer">footer</footer>
